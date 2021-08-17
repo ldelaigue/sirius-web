@@ -21,6 +21,7 @@ import org.eclipse.sirius.web.forms.AbstractWidget;
 import org.eclipse.sirius.web.forms.Checkbox;
 import org.eclipse.sirius.web.forms.Form;
 import org.eclipse.sirius.web.forms.Group;
+import org.eclipse.sirius.web.forms.Link;
 import org.eclipse.sirius.web.forms.ListItem;
 import org.eclipse.sirius.web.forms.MultiSelect;
 import org.eclipse.sirius.web.forms.Page;
@@ -81,6 +82,7 @@ public class FormTypesProvider implements ITypeProvider {
             Select.class,
             MultiSelect.class,
             SelectOption.class,
+            Link.class,
             org.eclipse.sirius.web.forms.List.class,
             ListItem.class,
             FormDescription.class,
