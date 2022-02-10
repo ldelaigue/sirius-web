@@ -219,13 +219,12 @@ public class RepresentationsDescriptionProvider implements IRepresentationsDescr
         };
     }
 
-    private Function<VariableManager, List<Object>> getItemsProvider() {
+    private Function<VariableManager, List<?>> getItemsProvider() {
         return variableManager -> {
             Object object = variableManager.getVariables().get(VariableManager.SELF);
             String id = this.objectService.getId(object);
             if (id != null) {
-                List<Object> items = new ArrayList<>();
-                items.addAll(this.representationService.getRepresentationDescriptorsForObjectId(id));
+                List<RepresentationDescriptor> items = this.representationService.getRepresentationDescriptorsForObjectId(id);
                 return items;
             }
             return List.of();
